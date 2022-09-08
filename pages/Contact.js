@@ -36,26 +36,26 @@ const Contact = () => {
             <h2>Follow me :</h2>
             <div className="space-x-10">
               <a
-                class="  text-gray-400 duration-300  hover:text-[#4267B2]"
+                className="  text-gray-400 duration-300  hover:text-[#4267B2]"
                 href="#"
               >
                 <FontAwesomeIcon icon={faFacebookF} className=" h-10" />
               </a>
               <a
-                class=" dark:hover:text-white text-gray-400  duration-300  hover:text-[#171515]"
+                className=" dark:hover:text-white text-gray-400  duration-300  hover:text-[#171515]"
                 href="https://github.com/saipraneeth800"
                 target="blank"
               >
                 <FontAwesomeIcon icon={faGithub} className=" h-10" />
               </a>
               <a
-                class=" text-gray-400  duration-300  hover:text-[#4285F4]"
+                className=" text-gray-400  duration-300  hover:text-[#4285F4]"
                 href="#"
               >
                 <FontAwesomeIcon icon={faEnvelope} className="h-10" />
               </a>
               <a
-                class=" text-gray-400 duration-300  hover:text-[#1DA1F2]"
+                className=" text-gray-400 duration-300  hover:text-[#1DA1F2]"
                 href="#"
               >
                 <FontAwesomeIcon icon={faTwitter} className="h-10" />
@@ -64,10 +64,10 @@ const Contact = () => {
           </div>
         </div>
 
-        <div class="lg:w-1/2 item-center flex-wrap">
+        <div className="lg:w-1/2 item-center flex-wrap">
           <div className=" shadow-2xl m-auto">
             <div className="p-4 md:p-12 text-center">
-              <form class="mt-5">
+              <form className="mt-5">
                 <div>
                   <label className="mb-2 text-sm text-gray-600 dark:text-gray-200">
                     Full Name :{" "}

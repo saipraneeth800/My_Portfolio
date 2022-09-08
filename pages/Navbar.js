@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import {useTheme} from 'next-themes'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMoon,faSun} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [navcolor, setNavcolor] = useState(false);
+  const {theme,setTheme} = useTheme()
+  const [cl,setCl] = useState(false)
+  useEffect(()=>setCl(true),[])
+
   const changeColor = () => {
     if (window.scrollY >= 100) {
       setNavcolor(true);
@@ -10,12 +17,12 @@ const Navbar = () => {
     }
   };
   // window.addEventListener('scroll',changeColor)
-
+  if(!cl) return null
   return (
     <>
-      <div className="bg-[#165952] sticky top-0 z-10 flex justify-around items-center h-20 shadow-lg">
+      <div className="bg-gray-700 dark:bg-gray-900 sticky top-0 z-10 flex justify-around items-center h-20 shadow-lg">
         <div>
-          <h1 className="text-2xl">LOGO</h1>
+          <h1 className="text-2xl text-white">LOGO</h1>
         </div>
         {/* <button
           data-collapse-toggle="navbar-default"
@@ -41,11 +48,11 @@ const Navbar = () => {
         </button> */}
         <div  id="navbar-default" className="hidden w-full md:block md:w-auto text-2xl text-white">
         
-          <ul class="flex  space-x-8  md:text-lg  dark:border-gray-700">
+          <ul className="flex  space-x-8  md:text-lg  dark:border-gray-700">
             <li>
               <a
                 href="#"
-                class="dark:text-white hover:text-[#9CD3D8]"
+                className="dark:text-white hover:text-[#9CD3D8]"
                 aria-current="page"
               >
                 Home
@@ -54,7 +61,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                class="dark:text-white hover:text-[#9CD3D8]"
+                className="dark:text-white hover:text-[#9CD3D8]"
                 aria-current="page"
               >
                 Projects
@@ -63,7 +70,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                class="dark:text-white hover:text-[#9CD3D8]"
+                className="dark:text-white hover:text-[#9CD3D8]"
                 aria-current="page"
               >
                 About
@@ -72,7 +79,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                class="dark:text-white hover:text-[#9CD3D8]"
+                className="dark:text-white hover:text-[#9CD3D8]"
                 aria-current="page"
               >
                 Contact
@@ -80,6 +87,7 @@ const Navbar = () => {
             </li>
 
             {/* <a href="#" className='hover:text-[#FFD116]'>Home</a> */}
+          <button className="pl-10" onClick={()=>setTheme(theme==='light'?'dark':'light')}>Theme  : {theme==='light'?<FontAwesomeIcon icon={faMoon} />:<FontAwesomeIcon icon={faSun} />}</button>
           </ul>
         </div>
       </div>
