@@ -1,5 +1,4 @@
-import React from 'react'
-import avatar from './../public/sai11.jpg'
+
 
 const Hero = () => {
   return (
@@ -19,7 +18,7 @@ const Hero = () => {
         </div>
         <div className='flex items-center justify-center lg:w-1/2'>
 
-        <img src="/sai11.jpg"  alt="" className='rounded-md '/>
+        <img src="/sai11.png"  alt="" className='rounded-md dark:bg-gray-800'/>
         </div>
     </div>
         {/* <div

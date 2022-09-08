@@ -19,21 +19,21 @@ const Contact = () => {
           <h1 className="text-4xl mb-4 font-medium ">Contact Me</h1>
           <div className="space-y-3 text-lg text-gray-700 dark:text-gray-500 mx-2">
             <div className="flex items-center gap-4 flex-wrap">
-              <FontAwesomeIcon icon={faLocationDot} className="text-gray-500"/>
+              <FontAwesomeIcon icon={faLocationDot} className="text-gray-500" />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Tempore, perspiciatis!
               </p>
             </div>
             <div className="flex items-center gap-4 flex-wrap">
-              <FontAwesomeIcon icon={faPhone} className="text-gray-500"/>
+              <FontAwesomeIcon icon={faPhone} className="text-gray-500" />
               <p>+91 123-456-7890</p>
             </div>
             <div className="flex items-center gap-4 flex-wrap">
-              <FontAwesomeIcon icon={faEnvelope} className="text-gray-500"/>
+              <FontAwesomeIcon icon={faEnvelope} className="text-gray-500" />
               <p>lorem@gmail.com</p>
             </div>
-            <h2>Follow me :</h2>
+            <h2>Social Media :</h2>
             <div className="space-x-10">
               <a
                 className="  text-gray-400 duration-300  hover:text-[#4267B2]"
@@ -64,7 +64,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="lg:w-1/2 item-center flex-wrap">
+        <div className="lg:w-1/2 item-center flex-wrap dark:border dark:border-gray-700">
           <div className=" shadow-2xl m-auto">
             <div className="p-4 md:p-12 text-center">
               <form className="mt-5">
