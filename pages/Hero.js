@@ -8,7 +8,7 @@ const Hero = () => {
     <div className='flex flex-col p-6 m-auto  lg:flex-row lg:items-center'>
         <div className='lg:w-3/5 p-10'>
         {/* <h1 className='text-3xl m-4 font-semibold'> */}
-        <h1 className='text-3xl text-center m-4 font-medium tracking-wider text-gray-800  lg:text-4xl'>
+        <h1 className='text-3xl text-center m-4 font-medium tracking-wider text-gray-800 dark:text-white lg:text-4xl'>
             Sai Praneeth
         </h1>
         <hr className='mx-auto w-56 h-1 bg-gray-100 rounded border-0  dark:bg-gray-700'/>
