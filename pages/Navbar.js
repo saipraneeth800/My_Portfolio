@@ -1,13 +1,14 @@
-import React, { useState,useEffect } from "react";
-import {useTheme} from 'next-themes'
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMoon,faSun} from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const Navbar = () => {
   const [navcolor, setNavcolor] = useState(false);
-  const {theme,setTheme} = useTheme()
-  const [cl,setCl] = useState(false)
-  useEffect(()=>setCl(true),[])
+  const { theme, setTheme } = useTheme();
+  const [cl, setCl] = useState(false);
+  useEffect(() => setCl(true), []);
 
   const changeColor = () => {
     if (window.scrollY >= 100) {
@@ -17,7 +18,7 @@ const Navbar = () => {
     }
   };
   // window.addEventListener('scroll',changeColor)
-  if(!cl) return null
+  if (!cl) return null;
   return (
     <>
       <div className="bg-gray-700 dark:bg-gray-900 sticky top-0 z-10 flex justify-around items-center h-20 shadow-lg">
@@ -46,32 +47,33 @@ const Navbar = () => {
             ></path>
           </svg>
         </button> */}
-        <div  id="navbar-default" className="hidden w-full md:block md:w-auto text-2xl text-white">
-        
-          <ul className="flex  space-x-8  md:text-lg  dark:border-gray-700">
+        <div
+          className="hidden w-full md:block md:w-auto text-2xl text-white"
+        >
+          <ul className="flex space-x-8  md:text-lg dark:border-gray-700">
             <li>
               <a
                 href="#"
                 className="dark:text-white hover:text-[#9CD3D8]"
-                aria-current="page"
+               
               >
                 Home
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="dark:text-white hover:text-[#9CD3D8]"
-                aria-current="page"
-              >
-                Projects
-              </a>
+              <Link href="/Project">
+                <a
+                  className="dark:text-white hover:text-[#9CD3D8]"
+                 
+                >
+                  Projects
+                </a>
+              </Link>
             </li>
             <li>
               <a
                 href="#"
                 className="dark:text-white hover:text-[#9CD3D8]"
-                aria-current="page"
               >
                 About
               </a>
@@ -80,14 +82,32 @@ const Navbar = () => {
               <a
                 href="#"
                 className="dark:text-white hover:text-[#9CD3D8]"
-                aria-current="page"
               >
                 Contact
               </a>
             </li>
-
             {/* <a href="#" className='hover:text-[#FFD116]'>Home</a> */}
-          <button className="pl-10" onClick={()=>setTheme(theme==='light'?'dark':'light')}>Theme  : {theme==='light'?<FontAwesomeIcon icon={faMoon} />:<FontAwesomeIcon icon={faSun} />}</button>
+
+          <li className="flex items-center gap-4">
+          <h1 className="text-xl">
+
+            {theme === "light" ? (
+              <FontAwesomeIcon icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon icon={faSun} />
+            )}
+          </h1>
+            <label class=" relative cursor-pointer">
+              <input
+                type="checkbox"
+                value=""
+                class="sr-only peer"
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              />
+
+              <div class="w-12 h-6 bg-gray-200   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:absolute after:top-[1.5px]  after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+            </label>
+          </li>
           </ul>
         </div>
       </div>
