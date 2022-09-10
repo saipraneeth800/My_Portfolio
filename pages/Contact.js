@@ -20,7 +20,7 @@ const Contact = () => {
         {/* <div className="lg:w-1/2  p-3 bg-[url('/contact.svg')] bg-no-repeat  bg-contain bg-bottom "> */}
           <h1 className="text-4xl mb-4 font-medium text-blue-900 dark:text-blue-700 ">Contact Me</h1>
           <div className="space-y-3 text-lg text-gray-700 dark:text-gray-500 mx-2">
-            <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-center gap-4">
               <FontAwesomeIcon icon={faLocationDot} className="text-gray-500" />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

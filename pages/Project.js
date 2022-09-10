@@ -5,7 +5,7 @@ const Project = () => {
     <>
       <div>
         <div className="text-center">
-          <h1 className="text-3xl m-10">My Projects</h1>
+          <h1 className="text-3xl m-10 text-blue-900 font-medium tracking-widest">My Projects</h1>
           <hr className="mx-auto w-56 h-1 bg-gray-100 rounded border-0  dark:bg-gray-700" />
         </div>
         <div className="flex flex-wrap justify-center">

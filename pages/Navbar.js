@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun,faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const Navbar = () => {
   const [navcolor, setNavcolor] = useState(false);
+  const [navopen,setNavopen] = useState(false);
+
+
   const { theme, setTheme } = useTheme();
   const [cl, setCl] = useState(false);
   useEffect(() => setCl(true), []);
@@ -25,32 +28,17 @@ const Navbar = () => {
         <div>
           <h1 className="text-2xl text-white">LOGO</h1>
         </div>
-        {/* <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          
-          <svg
-            className="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button> */}
+        <button
+              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavopen(!navopen)}
+            >
+              <FontAwesomeIcon icon={faBars}/>
+            </button>
         <div
-          className="hidden w-full md:block md:w-auto text-2xl text-white"
+          className={"lg:flex w-full md:block md:w-auto text-2xl text-white " + (navopen?" flex ":" hidden ")}
         >
-          <ul className="flex space-x-8  md:text-lg dark:border-gray-700">
+          <ul className="flex flex-col lg:flex-row list-none lg:ml-auto space-x-8  md:text-lg dark:border-gray-700">
             <li>
               <a
                 href="#"
@@ -59,6 +47,12 @@ const Navbar = () => {
               >
                 Home
               </a>
+            </li>
+            <li>
+            <a
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                  href="#pablo"
+                >HHH</a>
             </li>
             <li>
               <Link href="/Project">
