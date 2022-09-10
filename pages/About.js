@@ -34,12 +34,12 @@ const About = () => {
           <div className="flex justify-center border-gray-200 dark:border-gray-700 ">
             <button
               className={
-                "h-10  px-8 text-sm border-b-2 hover:border-gray-400 text-center sm:text-base  whitespace-nowrap " +
+                " h-10 px-6 text-sm border-b-2 hover:border-gray-400 text-center sm:text-base dark:text-white " +
                 (tab === 1 && "text-blue-600 border-blue-500 border-b-2")
               }
-              onClick={() => setTab(1)}
+              onClick={(e) => {e.preventDefault(),setTab(1)}}
             >
-              <FontAwesomeIcon icon={faCircleUser} className="pr-4" />
+              <FontAwesomeIcon icon={faCircleUser} className="md:pr-2" />
               Profile
             </button>
 
@@ -48,9 +48,9 @@ const About = () => {
                 "h-10 px-8 text-sm text-center text-gray-700 sm:text-base border-b-2 dark:text-white  hover:border-gray-400 " +
                 (tab === 2 && "text-blue-600 border-blue-500 border-b-2")
               }
-              onClick={() => setTab(2)}
+              onClick={(e) => {e.preventDefault(),setTab(2)}}
             >
-              <FontAwesomeIcon icon={faToolbox} className="pr-4" />
+              <FontAwesomeIcon icon={faToolbox} className="md:pr-2" />
               Skills
             </button>
 
@@ -59,9 +59,9 @@ const About = () => {
                 "h-10 px-8 text-sm text-center text-gray-700 sm:text-base dark:text-white  border-b-2 hover:border-gray-400 " +
                 (tab === 3 && "text-blue-600 border-blue-500 border-b-2")
               }
-              onClick={() => setTab(3)}
+              onClick={(e) => {e.preventDefault(),setTab(3)}}
             >
-              <FontAwesomeIcon icon={faUserGraduate} className="pr-4" />
+              <FontAwesomeIcon icon={faUserGraduate} className="md:pr-2" />
               Education
             </button>
           </div>
