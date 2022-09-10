@@ -97,15 +97,15 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faSun} />
             )}
           </h1>
-            <label class=" relative cursor-pointer">
+            <label className=" relative cursor-pointer">
               <input
                 type="checkbox"
                 value=""
-                class="sr-only peer"
+                className="sr-only peer"
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               />
 
-              <div class="w-12 h-6 bg-gray-200   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:absolute after:top-[1.5px]  after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+              <div className="w-12 h-6 bg-gray-200   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:absolute after:top-[1.5px]  after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
             </label>
           </li>
           </ul>

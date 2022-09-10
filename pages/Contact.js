@@ -4,6 +4,7 @@ import {
   faFacebookF,
   faGithub,
   faTwitter,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faLocationDot,
@@ -16,7 +17,8 @@ const Contact = () => {
     <>
       <div className="lg:flex m-4">
         <div className="lg:w-1/2  p-3">
-          <h1 className="text-4xl mb-4 font-medium ">Contact Me</h1>
+        {/* <div className="lg:w-1/2  p-3 bg-[url('/contact.svg')] bg-no-repeat  bg-contain bg-bottom "> */}
+          <h1 className="text-4xl mb-4 font-medium text-blue-900 dark:text-blue-700 ">Contact Me</h1>
           <div className="space-y-3 text-lg text-gray-700 dark:text-gray-500 mx-2">
             <div className="flex items-center gap-4 flex-wrap">
               <FontAwesomeIcon icon={faLocationDot} className="text-gray-500" />
@@ -33,34 +35,43 @@ const Contact = () => {
               <FontAwesomeIcon icon={faEnvelope} className="text-gray-500" />
               <p>lorem@gmail.com</p>
             </div>
-            <h2>Social Media :</h2>
+            <h2 className="text-blue-700">Social Media :</h2>
             <div className="space-x-10">
               <a
                 className="  text-gray-400 duration-300  hover:text-[#4267B2]"
                 href="#"
               >
-                <FontAwesomeIcon icon={faFacebookF} className=" h-10" />
+                <FontAwesomeIcon icon={faFacebookF} className=" lg:h-10 h-8" />
               </a>
               <a
                 className=" dark:hover:text-white text-gray-400  duration-300  hover:text-[#171515]"
                 href="https://github.com/saipraneeth800"
                 target="blank"
               >
-                <FontAwesomeIcon icon={faGithub} className=" h-10" />
+                <FontAwesomeIcon icon={faGithub} className=" lg:h-10 h-8" />
               </a>
               <a
                 className=" text-gray-400  duration-300  hover:text-[#4285F4]"
                 href="#"
               >
-                <FontAwesomeIcon icon={faEnvelope} className="h-10" />
+                <FontAwesomeIcon icon={faEnvelope} className="lg:h-10 h-8" />
               </a>
               <a
                 className=" text-gray-400 duration-300  hover:text-[#1DA1F2]"
                 href="#"
               >
-                <FontAwesomeIcon icon={faTwitter} className="h-10" />
+                <FontAwesomeIcon icon={faTwitter} className="lg:h-10 h-8" />
               </a>
+              <a
+                className="text-gray-400  duration-300 "
+                href="#"
+              >
+                <FontAwesomeIcon icon={faInstagram} className="lg:h-10 h-8 trial" aria-hidden="true"/>
+                
+              </a>
+              
             </div>
+            <img src="/contact.svg" alt="contact" className="w-3/4"></img>
           </div>
         </div>
 
@@ -69,7 +80,7 @@ const Contact = () => {
             <div className="p-4 md:p-12 text-center">
               <form className="mt-5">
                 <div>
-                  <label className="mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="mb-2 text-sm text-blue-600 dark:text-gray-200">
                     Full Name :{" "}
                   </label>
                   <input
@@ -80,7 +91,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex-1 mt-6">
-                  <label className="mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="mb-2 text-sm text-blue-700 dark:text-gray-200">
                     Email address
                   </label>
                   <input
@@ -91,7 +102,7 @@ const Contact = () => {
                 </div>
 
                 <div className="w-full mt-6">
-                  <label className="mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="mb-2 text-sm text-blue-700 dark:text-gray-200">
                     Message
                   </label>
                   <textarea
