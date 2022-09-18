@@ -5,17 +5,23 @@ import {
   faGithub,
   faTwitter,
   faInstagram,
+  faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faLocationDot,
   faPhone,
   faEnvelope,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
+  const handleSubmit = (e) =>{
+    e.preventDefault() 
+}
+
   return (
     <>
-      <div className="lg:flex m-4">
+      <div className="lg:flex m-4 " id="contact">
         <div className="lg:w-1/2  p-3">
         {/* <div className="lg:w-1/2  p-3 bg-[url('/contact.svg')] bg-no-repeat  bg-contain bg-bottom "> */}
           <h1 className="text-4xl mb-4 font-medium text-blue-900 dark:text-blue-700 ">Contact Me</h1>
@@ -41,32 +47,39 @@ const Contact = () => {
                 className="  text-gray-400 duration-300  hover:text-[#4267B2]"
                 href="#"
               >
-                <FontAwesomeIcon icon={faFacebookF} className=" lg:h-10 h-8" />
+                <FontAwesomeIcon icon={faFacebookF} className=" lg:h-10 h-6" />
               </a>
               <a
                 className=" dark:hover:text-white text-gray-400  duration-300  hover:text-[#171515]"
                 href="https://github.com/saipraneeth800"
                 target="blank"
               >
-                <FontAwesomeIcon icon={faGithub} className=" lg:h-10 h-8" />
+                <FontAwesomeIcon icon={faGithub} className=" lg:h-10 h-6" />
               </a>
               <a
-                className=" text-gray-400  duration-300  hover:text-[#4285F4]"
-                href="#"
+                className=" text-gray-400  duration-300  hover:text-[#D44638] "
+                href="https://github.com/saipraneeth800" target='blank'
               >
-                <FontAwesomeIcon icon={faEnvelope} className="lg:h-10 h-8" />
+                <FontAwesomeIcon icon={faEnvelope} className="lg:h-10 h-6" />
               </a>
               <a
                 className=" text-gray-400 duration-300  hover:text-[#1DA1F2]"
                 href="#"
               >
-                <FontAwesomeIcon icon={faTwitter} className="lg:h-10 h-8" />
+                <FontAwesomeIcon icon={faTwitter} className="lg:h-10 h-6" />
               </a>
               <a
-                className="text-gray-400  duration-300 "
+                className="text-gray-400 hover:text-[#e13060]  duration-300 "
                 href="#"
               >
-                <FontAwesomeIcon icon={faInstagram} className="lg:h-10 h-8 trial" aria-hidden="true"/>
+                <FontAwesomeIcon icon={faInstagram} className="lg:h-10 h-6 " aria-hidden="true"/>
+                
+              </a>
+              <a
+                className="text-gray-400 hover:text-[#0A66C2]  duration-300 "
+                href="#"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} className="lg:h-10 h-6 " aria-hidden="true"/>
                 
               </a>
               
@@ -78,13 +91,14 @@ const Contact = () => {
         <div className="lg:w-1/2 item-center flex-wrap dark:border dark:border-gray-700">
           <div className=" shadow-2xl m-auto">
             <div className="p-4 md:p-12 text-center">
-              <form className="mt-5">
+              <form method="POST" action="https://script.google.com/macros/s/AKfycbw0pMxX6NcpxvGLGTm7QIfSIeDi5bqZGF0pr21sBrJ7tG9a6p4-COz1Q7Bw5-32tOs4/exec" onSubmit={handleSubmit} className="mt-5">
                 <div>
                   <label className="mb-2 text-sm text-blue-600 dark:text-gray-200">
                     Full Name :{" "}
                   </label>
                   <input
                     type="text"
+                    name="Name"
                     placeholder="Enter Your Name"
                     className="w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700  "
                   />
@@ -96,6 +110,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="Email"
                     placeholder="Enter"
                     className="w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700  "
                   />
@@ -107,6 +122,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     placeholder="Message"
+                    name="Message"
                     className="w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700  h-32"
                   />
                 </div>

@@ -2,10 +2,12 @@ import React,{useState,useEffect} from "react";
 import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun,faBars,faHome,faDiagramProject,faUser,faContactCard } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+
+import { Link, animateScroll as scroll } from "react-scroll";
+
 export default function Nav({ fixed }) {
 
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navopen, setNavopen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [cl, setCl] = useState(false);
 
@@ -15,13 +17,13 @@ export default function Nav({ fixed }) {
 
   return (
     <>
-      <nav className="flex backdrop-blur-sm flex-wrap w-full  fixed items-center m-auto lg:p-5 bg-gray-00 mb-3 bg-gray-0 ">
+      <nav className="z-50 flex flex-wrap w-full  fixed items-center m-auto lg:p-5 bg-gray-50 dark:bg-gray-800 mb-3 bg-gray-0 ">
         <div className="px-4 mx-auto">
           <div className="w-full gap-10 flex justify-between lg:w-auto">
             <a
               className="text-xl  font-bold leading-relaxed mr-4 py-2"
               href="#"
-            >Logo
+            >SP.
               {/* <img src="/logo.png"  /> */}
             </a>
             
@@ -41,12 +43,12 @@ export default function Nav({ fixed }) {
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               />
 
-              <div className="w-12 h-6 bg-gray-200   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:absolute after:top-[14px]  after:left-[33px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+              <div className="w-12 h-6 bg-gray-200   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:absolute after:top-[14px]  after:left-[33px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-700"></div>
             </label> 
             <button
-              className="cursor-pointer text-xl leading-none px-3 py-1  lg:hidde"
+              className="cursor-pointer text-xl leading-none px-3 py-1 "
               type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
+              onClick={() => setNavopen(!navopen) } 
             >
               <FontAwesomeIcon icon={faBars}/>
             </button>
@@ -54,45 +56,79 @@ export default function Nav({ fixed }) {
           <div
             className={
               " justify-center " +
-              (navbarOpen ? " flex" : " hidden")
-            }
+              (navopen ? " flex " : " hidden ")
+            } 
           >
-            <ul className="flex flex-col">
+            <ul className="flex cursor-pointer flex-col ">
               <li>
-                <a
-                  className="p-3 flex items-center text-xs uppercase font-bold  hover:opacity-75"
-                  href="#"
-                >
+              <Link
+                activeClass="active"
+                to="hero"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="p-3 flex items-center uppercase font-bold  hover:opacity-75"
+                onClick={()=>{setNavopen(!navopen)}}
+              >
+
+                
                   <FontAwesomeIcon icon={faHome} className="text-lg leading-lg  opacity-75" /><span className="ml-2">Home</span>
-                </a>
+                
+              </Link>
               </li>
               <li>
-                <a
-                  className="p-3 flex items-center text-xs uppercase font-bold  hover:opacity-75"
-                  href="#"
-                >
+              <Link
+                activeClass="active"
+                to="project"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="p-3 flex items-center  uppercase font-bold  hover:opacity-75"
+                onClick={()=>{setNavopen(!navopen)}}
+              >
+                
+                
                   <FontAwesomeIcon icon={faDiagramProject} className="text-lg leading-lg  opacity-75" /><span className="ml-2">Projects</span>
-                </a>
+                
+              </Link>
               </li>
               <li>
-                <a
-                  className="p-3 flex items-center text-xs uppercase font-bold  hover:opacity-75"
-                  href="#"
-                >
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={()=>{setNavopen(!navopen)}} 
+                  className="p-3 flex items-center  uppercase font-bold  hover:opacity-75"
+              >
+                
+               
                   <FontAwesomeIcon icon={faUser} className="text-lg leading-lg  opacity-75" /><span className="ml-2">About</span>
-                </a>
+                
+              </Link>
               </li>
               <li>
-                <a
-                  className="p-3 flex items-center text-xs uppercase font-bold  hover:opacity-75"
-                  href="#"
-                >
-                  <FontAwesomeIcon icon={faContactCard} className="text-lg leading-lg  opacity-75" /><span className="ml-2">Contact</span>
-                </a>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="p-3 flex items-center  uppercase font-bold  hover:opacity-75"
+                onClick={()=>{setNavopen(!navopen)}}
+              >
+                  <FontAwesomeIcon icon={faContactCard} className="text-lg leading-lg  opacity-75" /><span className="ml-2">Contact</span>         
+              </Link>
               </li>
             </ul>
           </div>
         </div>
+        
       </nav>
     </>
   );
