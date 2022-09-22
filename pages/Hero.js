@@ -53,7 +53,7 @@ const Hero = () => {
             Commodi, saepe pariatur.
           </p> */}
 
-          <a href="/Sai_praneeth.pdf" target="_blank" rel="noreferrer">
+          <a href="/resume/Sai_praneeth.pdf" target="_blank" rel="noreferrer">
             <motion.button
               whileHover={{ scale: 1.2, originX: 0 }}
               transition={{ type: "spring", stiffness: 300 }}
