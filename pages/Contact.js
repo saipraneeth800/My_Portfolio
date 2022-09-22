@@ -65,8 +65,6 @@ const Contact = () => {
                     className="  text-gray-400 duration-300  hover:text-[#4267B2]"
                     href="https://www.facebook.com/manukonda.saipraneeth"
                     target="_blank"
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ type: "spring", stiffness: 300 }}
                   >
                     <FontAwesomeIcon
                       icon={faFacebookF}
