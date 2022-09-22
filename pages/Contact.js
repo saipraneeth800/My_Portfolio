@@ -64,7 +64,7 @@ const Contact = () => {
                   <a
                     className="  text-gray-400 duration-300  hover:text-[#4267B2]"
                     href="https://www.facebook.com/manukonda.saipraneeth"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <FontAwesomeIcon
                       icon={faFacebookF}
@@ -79,7 +79,7 @@ const Contact = () => {
                   <a
                     className=" dark:hover:text-white text-gray-400  duration-300  hover:text-[#171515]"
                     href="https://github.com/saipraneeth800"
-                    target="blank"
+                    target="blank" rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faGithub} className=" lg:h-10 h-6" />
                   </a>
@@ -91,7 +91,7 @@ const Contact = () => {
                   <a
                     className=" text-gray-400  duration-300  hover:text-[#D44638] "
                     href="mailto:praneethsai800@gmail.com"
-                    target="blank"
+                    target="blank" rel="noreferrer"
                   >
                     <FontAwesomeIcon
                       icon={faEnvelope}

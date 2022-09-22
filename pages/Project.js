@@ -31,7 +31,7 @@ const Project = () => {
               <div className="text-center mt-6 flex gap-4 justify-center">
                 <a
                   href="https://github.com/saipraneeth800/Weather_App"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"  
                   className="p-3 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 "
                 >
                   Github
@@ -61,7 +61,7 @@ const Project = () => {
               <div className=" text-center mt-6 ">
                 <a
                   href="https://github.com/saipraneeth800/Notes"
-                  target="_blank"
+                  target="_blank" rel="noreferrer" 
                   className="p-3 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 "
                 >
                   Github
