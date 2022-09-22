@@ -4,6 +4,9 @@ import {
   faUserGraduate,
   faCircleUser,
   faToolbox,
+  faChess,
+  faGamepad,
+  faPuzzlePiece,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
@@ -31,12 +34,18 @@ const About = () => {
           </h1>
           <hr className=" w-56 h-1 m-auto bg-gray-100 rounded border-0  dark:bg-gray-700" />
           <p className="p-4 text-gray-700 dark:text-gray-400">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            magnam eveniet itaque odio ad commodi architecto veritatis inventore
-            accusamus nostrum, asperiores voluptatem corrupti quisquam tenetur.
-            Dolor, dolores! Eos, nemo id delectus dolorem fugiat maiores!
-            Laboriosam asperiores corrupti temporibus cum omnis!
+            I am currently pursuing my MCA Post Graduartion degree from Gayatri
+            Vidya Parishad College of Engineering, Visakhapatnam.
+            <br /> Concentrating on front end development.
+            <br /> My interest include : <br />
           </p>
+          <div className="flex items-center pl-4 -mt-2 space-x-3">
+            <FontAwesomeIcon icon={faChess} className="" /> <p> Chess </p>
+            <FontAwesomeIcon icon={faGamepad} className="" />{" "}
+            <p> Video Games </p>
+            <FontAwesomeIcon icon={faPuzzlePiece} className="" />{" "}
+            <p> Sudoku </p>
+          </div>
           <div className="flex justify-center border-gray-200 dark:border-gray-700">
             <button
               className={
@@ -79,7 +88,11 @@ const About = () => {
           </div>
           <div className="dark:bg-gray-800 mt-4 w-full mb-6 shadow-lg   rounded-lg ">
             <div className="px-4 py-5 ">
-              <div className={(tab === 1 ? " block " : " hidden ") + " pl-4 space-y-3 "}>
+              <div
+                className={
+                  (tab === 1 ? " block " : " hidden ") + " pl-4 space-y-3 "
+                }
+              >
                 <p>
                   <span className="text-blue-700">Name : </span>
                   <span>M. Sai Praneeth</span>
@@ -93,7 +106,7 @@ const About = () => {
                   <span>Student</span>
                 </p>
               </div>
-              <div className={(tab === 2 ? " block " : " hidden ")}>
+              <div className={tab === 2 ? " block " : " hidden "}>
                 <ul className="pl-4">
                   <li>
                     <FontAwesomeIcon icon={faHtml5} className="pr-2 " />
@@ -113,16 +126,16 @@ const About = () => {
                   </li>
                 </ul>
               </div>
-              <div className={(tab === 3 ? " block " : " hidden ") + " pl-4 "}>
+              <div className={tab === 3 ? " block " : " hidden "}>
                 <p className="flex flex-col gap-2">
-                  <span className="text-blue-800">2023</span>
+                  <span className="text-blue-800">2021-23</span>
                   <span>MCA, GVPCE</span>
                 </p>
-                <p className="flex flex-col pt-4 gap-2">
+                <p className="flex flex-col gap-2 pt-2">
                   <span className="text-blue-800">2021</span>
                   <span>B.Sc, Prism Degree College </span>
                 </p>
-                <p className="flex flex-col pt-4 gap-2">
+                <p className="flex flex-col gap-2 pt-2">
                   <span className="text-blue-800">2018</span>
                   <span>
                     MPC,(12<sup>th</sup>) Sri Chaitanya Jr College
